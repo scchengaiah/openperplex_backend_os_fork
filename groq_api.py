@@ -26,6 +26,8 @@ def get_answer(query, contexts, date_context):
             messages=messages,
             stream=True,
             stop=None,
+            max_tokens=8192,
+            temperature=0.5
         )
 
         for chunk in stream:
